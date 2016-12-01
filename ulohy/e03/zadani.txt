@@ -15,12 +15,13 @@ If they match it should return true, false otherwise.
 --------------
 
 Then create a class Bike which simulates bicycle. Initializer will accept 3 mandatory
-arguments, max number of rear and front gears and a name. It will also accept optional
-arguments - color and size of wheels with default value of 26.
+arguments, max number of rear and front gears and a name. It will also accept two optional
+arguments - color and size, size should default to of 26, color should be without default
+value.
 
 Class will have a register of all bikes that were created. Each bike will start with current
 gears 1 and 1. It should also have methods front_gear_up! and front_gear_down! which changes
-current gears up and down (respecting maximum and minumum). Also define methods for rear gear.
+current gears up and down (respecting maximum and minimum). Also define methods for rear gear.
 
 Then define methods:
 * current_gear - outputs string representation of current gear configuration, e.g. "2x7"
