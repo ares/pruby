@@ -32,4 +32,3 @@ To bude provádět do té doby, dokud ujetá vzdálenost kola není větší ne�
 Až všechny kola dokončí závod, vypište pořadí v jakém dojely. Poté přidejte ještě počítání skutečného
 času. Aktuální čas zjistíte pomocí volání Time.now. Uložte si tedy čas při startu threaady a těsně
 před koncem a rozdíl vypište. Porovnejte pořadí s vypsanými časy.
-popsat bike race - sleep 1 casy vs poradi dokonceni
