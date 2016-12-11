@@ -11,16 +11,16 @@
 
 # Struktura kurzu
 
-* každý den 9-17
+* každý den 8-16
 * přestávky dle potřeby, oběd
 * vlastní počítače
 * programovací úlohy
 * odkazy:
-    * [https://ares.github.io/pruby/](https://ares.github.io/pruby/)
-    * [Etherpad](https://v.etherpad.org/p/ruby_kurz)
+    * Prezentace [https://ares.github.io/pruby/](https://ares.github.io/pruby/)
     * [Ruby installer a devkit](http://rubyinstaller.org/downloads/)
     * [Git installer](https://git-scm.com/download/win)
-    * [Ruby Warrior](https://www.bloc.io/ruby-warrior#/)
+    * [Ruby Warrior](https://www.bloc.io/ruby-warrior#/) pruby@email.cz / prubypcdir
+    * [Try ruby](http://tryruby.org)
 
 ---
 
@@ -28,7 +28,7 @@
 
 * standardní balíčkovací systémy
 * na Windows existuje installer
-* je možné i kompilovat ze zdrojového kódu (MIT)
+* je možné i zkompilovat ze zdrojového kódu (MIT)
 * [https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)
 
 ---
@@ -46,7 +46,7 @@
 
 * terminál
 * git, github
-* [https://github.com/ares/pruby/](https://github.com/ares/pruby/)
+* Úlohy - [https://github.com/ares/pruby/](https://github.com/ares/pruby/)
 * textový editor - [https://atom.io](https://atom.io)
 
 ---
@@ -211,10 +211,10 @@ Tzv.  statement modifiers
     !ruby
     string = 'localhost:2000'
     string =~ /.*:.+/     # 0
-    string =~ /(.)*:(.)+/ # nastaví $1 a $2
+    string =~ /(.*):(.)+/ # nastaví $1 a $2
 
     # vrátí match data nebo nil
-    data = string.match(/^(.):(\d+)$/)
+    data = string.match(/^(.+):(\d+)$/)
     data[1] # => localhost
     data[2] # => 2000
 
@@ -317,7 +317,7 @@ argumenty jsou dostupné uvnitř metody jako lokální proměnné viz ukázka
 
     def minimal_allocation(input)
       allocate_size = input.size * 3
-      5 if allocate_size <= 0
+      5 if allocate_size <= 4
     end
 
 ---
@@ -653,7 +653,7 @@ možnosti jsou private, protected, public
     class Hunter
       # duck-typing, kontrola rozhraní objektu
       def shoot(duck)
-        duck.respond_to?(:quack) && bang!
+        duck.respond_to?(:quack) and bang!
       end
     end
 
@@ -664,7 +664,7 @@ možnosti jsou private, protected, public
     !ruby
     class Hunter
       def shoot(duck)
-        duck.respond_to?(:quack) && bang!
+        duck.respond_to?(:quack) and bang!
       end
     end
 
@@ -700,7 +700,7 @@ další užitečné průzkumné metody
 * pokud dojde k zavolání nedefinované metody, můžeme chování upravit předefinováním method_missing
 * vždy ošetřit else
 * vždy volat super
-* vždy také předefinovat respond_to_missing
+* vždy také předefinovat respond_to_missing?(method, p=false)
 
 příklad s find_by_*
 
@@ -993,7 +993,7 @@ příklad serveru
       Thread.new(worker_id) do |id|
         begin
           while (job = queue.pop(true)) # non-blocking
-            puts "#{job} take by worker #{id}"
+            puts "#{job} taken by worker #{id}"
           end
         rescue ThreadError              # pop on empty queue
         end

@@ -1344,16 +1344,16 @@ li li { font-size: 1em !important; }
             
             
             <section><ul>
-<li>každý den 9-17</li>
+<li>každý den 8-16</li>
 <li>přestávky dle potřeby, oběd</li>
 <li>vlastní počítače</li>
 <li>programovací úlohy</li>
 <li>odkazy:<ul>
-<li><a href="https://ares.github.io/pruby/">https://ares.github.io/pruby/</a></li>
-<li><a href="https://v.etherpad.org/p/ruby_kurz">Etherpad</a></li>
+<li>Prezentace <a href="https://ares.github.io/pruby/">https://ares.github.io/pruby/</a></li>
 <li><a href="http://rubyinstaller.org/downloads/">Ruby installer a devkit</a></li>
 <li><a href="https://git-scm.com/download/win">Git installer</a></li>
-<li><a href="https://www.bloc.io/ruby-warrior#/">Ruby Warrior</a></li>
+<li><a href="https://www.bloc.io/ruby-warrior#/">Ruby Warrior</a> pruby@email.cz / prubypcdir</li>
+<li><a href="http://tryruby.org">Try ruby</a></li>
 </ul>
 </li>
 </ul></section>
@@ -1389,7 +1389,7 @@ li li { font-size: 1em !important; }
             <section><ul>
 <li>standardní balíčkovací systémy</li>
 <li>na Windows existuje installer</li>
-<li>je možné i kompilovat ze zdrojového kódu (MIT)</li>
+<li>je možné i zkompilovat ze zdrojového kódu (MIT)</li>
 <li><a href="https://rubyinstaller.org/downloads/">https://rubyinstaller.org/downloads/</a></li>
 </ul></section>
             
@@ -1459,7 +1459,7 @@ li li { font-size: 1em !important; }
             <section><ul>
 <li>terminál</li>
 <li>git, github</li>
-<li><a href="https://github.com/ares/pruby/">https://github.com/ares/pruby/</a></li>
+<li>Úlohy - <a href="https://github.com/ares/pruby/">https://github.com/ares/pruby/</a></li>
 <li>textový editor - <a href="https://atom.io">https://atom.io</a></li>
 </ul></section>
             
@@ -1921,10 +1921,10 @@ li li { font-size: 1em !important; }
             
             <section><div class="highlight"><pre><span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;localhost:2000&#39;</span>
 <span class="n">string</span> <span class="o">=~</span> <span class="sr">/.*:.+/</span>     <span class="c1"># 0</span>
-<span class="n">string</span> <span class="o">=~</span> <span class="sr">/(.)*:(.)+/</span> <span class="c1"># nastaví $1 a $2</span>
+<span class="n">string</span> <span class="o">=~</span> <span class="sr">/(.*):(.)+/</span> <span class="c1"># nastaví $1 a $2</span>
 
 <span class="c1"># vrátí match data nebo nil</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/^(.):(\d+)$/</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sr">/^(.+):(\d+)$/</span><span class="p">)</span>
 <span class="n">data</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="c1"># =&gt; localhost</span>
 <span class="n">data</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="c1"># =&gt; 2000</span>
 </pre></div>
@@ -2175,7 +2175,7 @@ li li { font-size: 1em !important; }
 
 <span class="k">def</span> <span class="nf">minimal_allocation</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
   <span class="n">allocate_size</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="mi">3</span>
-  <span class="mi">5</span> <span class="k">if</span> <span class="n">allocate_size</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+  <span class="mi">5</span> <span class="k">if</span> <span class="n">allocate_size</span> <span class="o">&lt;=</span> <span class="mi">4</span>
 <span class="k">end</span>
 </pre></div>
 </section>
@@ -3112,7 +3112,7 @@ li li { font-size: 1em !important; }
 <span class="k">class</span> <span class="nc">Hunter</span>
   <span class="c1"># duck-typing, kontrola rozhraní objektu</span>
   <span class="k">def</span> <span class="nf">shoot</span><span class="p">(</span><span class="n">duck</span><span class="p">)</span>
-    <span class="n">duck</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:quack</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">bang!</span>
+    <span class="n">duck</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:quack</span><span class="p">)</span> <span class="ow">and</span> <span class="n">bang!</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </pre></div>
@@ -3148,7 +3148,7 @@ li li { font-size: 1em !important; }
             
             <section><div class="highlight"><pre><span class="k">class</span> <span class="nc">Hunter</span>
   <span class="k">def</span> <span class="nf">shoot</span><span class="p">(</span><span class="n">duck</span><span class="p">)</span>
-    <span class="n">duck</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:quack</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">bang!</span>
+    <span class="n">duck</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="ss">:quack</span><span class="p">)</span> <span class="ow">and</span> <span class="n">bang!</span>
   <span class="k">end</span>
 <span class="k">end</span>
 
@@ -3237,7 +3237,7 @@ li li { font-size: 1em !important; }
 <li>pokud dojde k zavolání nedefinované metody, můžeme chování upravit předefinováním method_missing</li>
 <li>vždy ošetřit else</li>
 <li>vždy volat super</li>
-<li>vždy také předefinovat respond_to_missing</li>
+<li>vždy také předefinovat respond_to_missing?(method, p=false)</li>
 </ul>
 <p>příklad s find_by_*</p></section>
             
@@ -4061,7 +4061,7 @@ li li { font-size: 1em !important; }
   <span class="no">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">worker_id</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="nb">id</span><span class="o">|</span>
     <span class="k">begin</span>
       <span class="k">while</span> <span class="p">(</span><span class="n">job</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="kp">true</span><span class="p">))</span> <span class="c1"># non-blocking</span>
-        <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">job</span><span class="si">}</span><span class="s2"> take by worker </span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">job</span><span class="si">}</span><span class="s2"> taken by worker </span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span>
       <span class="k">end</span>
     <span class="k">rescue</span> <span class="no">ThreadError</span>              <span class="c1"># pop on empty queue</span>
     <span class="k">end</span>
