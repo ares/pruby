@@ -11,7 +11,7 @@
 
 # Struktura kurzu
 
-* každý den 8-16
+* každý den 9-16
 * přestávky dle potřeby, oběd
 * vlastní počítače
 * programovací úlohy
@@ -1151,7 +1151,7 @@ inicializace v souboru
 # Tipy a triky a co se jinam nevešlo
 
 * Memoize pattern (víceřádkové)
-* gem pry, &amp;. (2.3+) 
+* gem pry, &amp;. (2.3+), map(&:upcase)
 * [Popularita Ruby](http://www.tiobe.com/tiobe_index)
 * další implementace
     - MRI
