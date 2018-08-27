@@ -1,6 +1,6 @@
 Vytvořte skript, který pomocí bundleru bude využívat gem rest-client. Skript bude
 vypisovat větve zadaného repozitáře na githubu. Dokumentace ke Github REST API je
-ka nalezení na https://developer.github.com/v3/
+k nalezení na https://developer.github.com/v3/
 Na parsování odpovědi můžete použít gem json.
 Dále najděte vhodný gem na výpis textu barevně a použijte ho tak, aby vypsané větve
 byly zelené. Poté pomocí gemu highline implementujte jednoduché textové rozhraní,

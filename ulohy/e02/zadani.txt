@@ -24,7 +24,8 @@ Zkopírujte i soubor s testy, upravte v něm název testovaného souboru a ově�
 nerozbili žádný test.
 
 Dále vytvořte skript morse_coder.rb definující dvě metody encode a decode, které budou
-zadaný stringový argument převádět na morseovku a zpět.
+svůj stringový argument převádět na morseovku a zpět.
+
 Pro převod použijte soubor morse.rb, který definuje konstantu MORSE. Při převodu z textu
 na morseovku jako oddělovač mezi písmenky použijte symbol |. Mezery mezi slovy ponechte
 jako mezery.
