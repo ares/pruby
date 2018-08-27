@@ -17,10 +17,8 @@
 * programovací úlohy
 * odkazy:
     * [https://ares.github.io/pruby/](https://ares.github.io/pruby/)
-    * [Etherpad](https://v.etherpad.org/p/ruby_kurz)
     * [Ruby installer a devkit](http://rubyinstaller.org/downloads/)
     * [Git installer](https://git-scm.com/download/win)
-    * [Ruby Warrior](https://www.bloc.io/ruby-warrior#/)
 
 ---
 
@@ -114,7 +112,7 @@
 # Datové typy - ukázky
 
 * string
-* číslo (Fixnum, Float, BigDecimal)
+* číslo (Integer, Float, BigDecimal)
 * nil
 * true, false (TrueClass, FalseClass)
 * pole
@@ -299,6 +297,7 @@ ukázka definice a volání
     def name(a, b, *args)
     def name(a: 'x', b: 'y') # ruby 2.0
     def name(a:, b:)         # ruby 2.1
+    def name(**kwargs)
 
 argumenty jsou dostupné uvnitř metody jako lokální proměnné viz ukázka
 
@@ -1151,7 +1150,7 @@ inicializace v souboru
 # Tipy a triky a co se jinam nevešlo
 
 * Memoize pattern (víceřádkové)
-* gem pry
+* gem pry, &amp;. (2.3+) 
 * [Popularita Ruby](http://www.tiobe.com/tiobe_index)
 * další implementace
     - MRI

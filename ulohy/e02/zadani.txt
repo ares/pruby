@@ -11,11 +11,9 @@ words should remain as spaces.
 Then create another script that loads morse_coder.rb and calls both encode and decode
 on a string to verify it returns the same result
 
-Example
+Example:
 
-Příklad:
-
-  # encode('hello world') should return '....|.|.-..|.-..|--- .--|---|.-.|.-..|-..'
+  # encode('hello world') # => '....|.|.-..|.-..|--- .--|---|.-.|.-..|-..'
   # decode(encode('hello world')) # => 'hello_world'
 
 #########################################################################################################
@@ -26,7 +24,7 @@ Zkopírujte i soubor s testy, upravte v něm název testovaného souboru a ově�
 nerozbili žádný test.
 
 Dále vytvořte skript morse_coder.rb definující dvě metody encode a decode, které budou
-zadaný svůj stringový argument převádět na morseovku a zpět.
+zadaný stringový argument převádět na morseovku a zpět.
 Pro převod použijte soubor morse.rb, který definuje konstantu MORSE. Při převodu z textu
 na morseovku jako oddělovač mezi písmenky použijte symbol |. Mezery mezi slovy ponechte
 jako mezery.
@@ -36,6 +34,6 @@ abyste ověřili, že fungují správně
 
 Příklad:
 
-  # encode('hello world') should return '....|.|.-..|.-..|--- .--|---|.-.|.-..|-..'
-  # decode(encode('hello world')) # => 'hello_world'
+  # encode('hello world') # => '....|.|.-..|.-..|--- .--|---|.-.|.-..|-..'
+  # decode(encode('hello world')) # => 'hello world'
 
