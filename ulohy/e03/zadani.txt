@@ -67,7 +67,8 @@ Třída bude mít registr všech vytvořených instancí kol. Každé
 kolo bude mít výchozí převody nastavené na 1. Definujte dvě
 metody front_gear_up! a front_gear_down! které změní aktuální
 přední převod nahoru či dolu (respektující maximum a minimum).
-Stejným způsobem definujte metody pro zadní převod.
+Stejným způsobem definujte metody pro zadní převod -
+rear_gear_up! rear_gear_down!.
 
 Dále definujte metody:
 * current_gear, která vypíše stringovou reprezentaci aktuálního převodu například "2x7".

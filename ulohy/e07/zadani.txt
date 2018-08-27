@@ -15,8 +15,8 @@ až 1 vteřinu.
 --------------
 
 Poté implementujte vlastní server, který bude poslouchat na portu 2000. Server
-implementujte jako třídu MorseServer, která bude port a IP adresu na které poslouchá
-očekávat jako argumenty svého konstruktoru. Při chybě se server odpojí a začne znovu
+implementujte jako třídu MorseServer, jejíž konstruktor bude očekávat port a IP adresu
+na které server poslouchá. Při chybě se server odpojí a začne znovu
 poslouchat na stejném portu.
 
 Otestujte svoji implementaci pomocí skriptu z první části. Jakmile budete mít implementaci

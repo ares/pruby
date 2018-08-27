@@ -14,7 +14,7 @@ za zavřený po 2 sekundách. Otevřené porty vypište na standardní výstup.
 
 Zlepšete rychlost skenování pomocí threadů. Skript bude akceptovat další parametr
 a sice počet threadů v poolu, které budou skenovat porty paralelně. Thready
-postupně projdou všechny porty z rozsahu, každý port však bude oskenován
+postupně projdou všechny porty z rozsahu (v libovolném pořadí), každý port však bude oskenován
 pouze jedním vláknem.
 
 porovnejte dobu běhu
@@ -30,6 +30,5 @@ kolo pustí ve vláknu jednoduchý cyklus, který na kole zavolá metodu action 
 To bude provádět do té doby, dokud ujetá vzdálenost kola není větší než délka závodu.
 
 Až všechny kola dokončí závod, vypište pořadí v jakém dojely. Poté přidejte ještě počítání skutečného
-času. Aktuální čas zjistíte pomocí volání Time.now. Uložte si tedy čas při startu threaady a těsně
+času. Aktuální čas zjistíte pomocí volání Time.now. Uložte si tedy čas při startu threadu a těsně
 před koncem a rozdíl vypište. Porovnejte pořadí s vypsanými časy.
-popsat bike race - sleep 1 casy vs poradi dokonceni
