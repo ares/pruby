@@ -18,16 +18,16 @@
 * odkazy:
     * Prezentace [https://ares.github.io/pruby/](https://ares.github.io/pruby/)
     * [Ruby installer a devkit](http://rubyinstaller.org/downloads/)
-    * [Git installer](https://git-scm.com/download/win)
-    * [Try ruby](http://tryruby.org)
+    * [Win Git installer](https://git-scm.com/download/win)
 
 ---
 
 # Instalace
 
 * standardní balíčkovací systémy
-* na Windows existuje installer
 * je možné i zkompilovat ze zdrojového kódu (MIT)
+* rbenv a rvm
+* na Windows existuje installer
 * [https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)
 
 ---
